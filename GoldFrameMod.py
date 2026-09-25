@@ -1,4 +1,4 @@
-# meta developer: @NeoKirilX
+# meta developer: @modules_from_neokirilx
 # scope: hikka
 
 import io
@@ -60,6 +60,9 @@ _MIME_EXT = {
 class GoldFrameMod(loader.Module):
     """Модуль для наложения золотой рамки на фото, картинки (png/webp/bmp/...), гифки и видео (mp4/webm/mov/mkv/...), а также анимированные стикеры, с авто-скачиванием рамки и шрифтов"""
     strings = {"name": "GoldFrame"}
+
+    def author(self) -> str:
+        return "@modules_from_neokirilx"
 
     async def client_ready(self, client, db):
         self._assets_checked = False
