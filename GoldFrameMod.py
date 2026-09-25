@@ -305,7 +305,7 @@ class GoldFrameMod(loader.Module):
         out_info = await asyncio.to_thread(self._ffprobe, out_path)
         return data, out_info
 
-    @loader.command(ru_doc="Накладывает рамку на фото, картинку, гифку или видео. Работает с .mp4/.webm/.mov/.mkv/.png/.webp/.gif и т.д. Использование: .рамка [т текст]")
+    @loader.command(ru_doc="Накладывает рамку на фото, картинку, гифку или видео. Работает с .mp4/.webm/.mov/.mkv/.png/.webp/.gif и т.д. Использование: .рамка [т текст]", aliases=["frame"])
     async def рамка(self, message):
         reply = await message.get_reply_message()
         info = self._media_info(reply)
